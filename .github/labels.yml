@@ -43,18 +43,15 @@
 - name: 📦 Dependencies
   description: Pull requests that update a dependency file
   color: 95A5A6
+- name: 🔒 Security
+  description: Pull requests that update a security dependency
+  color: 95A5A6
 - name: 📝 Documentation
   description: Improvements or additions to documentation
   color: 228AFF
 - name: 🤦‍ Duplicate
   description: This issue or pull request already exists
   color: 17202A
-- name: 🤩 size/xs
-  description: Pull request size XS
-  color: 27AE60
-- name: 🥳 size/s
-  description: Pull request size S
-  color: 2ECC71
 - name: 😎 size/m
   description: Pull request size M
   color: F1C40F

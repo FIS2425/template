@@ -29,7 +29,7 @@
   "vulnerabilityAlerts": {
     "enabled": true,
     "groupName": "vulnerable",
-    "labels": ["security", "dependencies"]
+    "labels": ["🔒 Security", "📦 Dependencies"]
   },
   "ignoreDeps": ["npm", "node"],
   "enabledManagers": ["npm", "github-actions"],
