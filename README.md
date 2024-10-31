@@ -40,6 +40,12 @@ To check for code quality using linters, run:
 npm run lint
 ```
 
+For automatic linting fixes, use:
+
+```bash
+npm run lint-fix
+```
+
 ## Docker Setup 🐳
 
 To run the application in a Docker container:
