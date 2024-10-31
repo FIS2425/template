@@ -1,0 +1,39 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Template repository for starting a microservice",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env ./src/index.js",
+    "lint": "node --no-warnings --trace-warnings node_modules/.bin/eslint src/**/*.js",
+    "dev": "node --watch --env-file=.env ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FIS2425/template.git"
+  },
+  "keywords": [
+    "microservice",
+    "MERN"
+  ],
+  "author": "alvarobernal2412",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/FIS2425/template/issues"
+  },
+  "homepage": "https://github.com/FIS2425/template#readme",
+  "devDependencies": {
+    "@eslint/js": "9.13.0",
+    "eslint": "9.13.0",
+    "globals": "15.11.0"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.21.1",
+    "mongoose": "8.7.3"
+  }
+}
