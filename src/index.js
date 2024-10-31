@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
   res.send("API funcionando correctamente");
 });
 
+app.get("/holi", (req, res) => {
+  res.send("holo");
+});
+
 // Iniciar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);

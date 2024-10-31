@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node --env-file=.env ./src/index.js",
     "lint": "node --no-warnings --trace-warnings node_modules/.bin/eslint src/**/*.js",
-    "dev": "node --watch --env-file=.env ./src/index.js"
+    "dev": "node --watch --env-file=.env ./src/index.js",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,12 @@
   },
   "homepage": "https://github.com/FIS2425/template#readme",
   "devDependencies": {
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@eslint/js": "9.13.0",
     "eslint": "9.13.0",
-    "globals": "15.11.0"
+    "globals": "15.11.0",
+    "husky": "9.1.6"
   },
   "dependencies": {
     "cors": "2.8.5",
