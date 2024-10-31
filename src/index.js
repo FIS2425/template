@@ -1,6 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import swaggerUI from "swagger-ui-express";
+import YAML from "yamljs";
+
+const swaggerDocument = YAML.load("./openapi.yaml");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -20,9 +24,7 @@ app.get("/", (req, res) => {
   res.send("API funcionando correctamente");
 });
 
-app.get("/holi", (req, res) => {
-  res.send("holo");
-});
+app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 // Iniciar el servidor
 app.listen(PORT, () => {
