@@ -1,10 +1,10 @@
-import express from "express";
-import mongoose from "mongoose";
-import cors from "cors";
-import swaggerUI from "swagger-ui-express";
-import YAML from "yamljs";
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import swaggerUI from 'swagger-ui-express';
+import YAML from 'yamljs';
 
-const swaggerDocument = YAML.load("./openapi.yaml");
+const swaggerDocument = YAML.load('./openapi.yaml');
 
 
 const app = express();
@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
   res.send('API funcionando correctamente');
 });
 
-app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 
 // Iniciar el servidor
