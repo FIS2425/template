@@ -1,36 +1,20 @@
-import express from 'express';
-import cors from 'cors';
-import swaggerUI from 'swagger-ui-express';
-import YAML from 'yamljs';
-import { connectDB } from './config/database.js';
+import mongoose from 'mongoose';
+import configureApp from './config/configureApp.js';
 
-const swaggerDocument = YAML.load('./openapi.yaml');
-
-
-const app = express();
+const MONOGO_URI = process.env.MONGOURL;
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
-app.use(express.json());
+mongoose
+  .connect(MONOGO_URI)
+  .then(() => {
+    console.log('Conexión con MongoDB OK');
 
-app.get('/', (req, res) => {
-  res.send('API funcionando correctamente');
-});
+    const app = configureApp();
 
-app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
-
-
-const startServer = async () => {
-  try {
-    await connectDB();
-    
     app.listen(PORT, () => {
-      console.log(`Servidor escuchando en http://localhost:${PORT}/docs`);
+      console.log(`Servidor escuchando en http://localhost:${PORT}`);
     });
-  } catch (error) {
-    console.error('Error al iniciar el servidor:', error);
-    process.exit(1);
-  }
-};
-
-startServer();
+  })
+  .catch((error) => {
+    console.error('Error de conexión con MongoDB:', error.message);
+  });
