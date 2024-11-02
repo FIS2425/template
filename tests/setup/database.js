@@ -1,12 +1,12 @@
-import mongoose from "mongoose";
-import { MongoMemoryServer } from "mongodb-memory-server";
+import mongoose from 'mongoose';
+import { MongoMemoryServer } from 'mongodb-memory-server';
 
 let mongoServer;
 
 export const connect = async () => {
   mongoServer = await MongoMemoryServer.create();
   await mongoose.connect(mongoServer.getUri());
-  console.log("MongoDB en memoria conectado");
+  console.log('MongoDB en memoria conectado');
 };
 
 export const closeDatabase = async () => {
@@ -14,7 +14,7 @@ export const closeDatabase = async () => {
     await mongoose.connection.dropDatabase();
     await mongoose.connection.close();
     await mongoServer?.stop();
-    console.log("MongoDB en memoria desconectado");
+    console.log('MongoDB en memoria desconectado');
   }
 };
 
@@ -27,5 +27,5 @@ export const clearDatabase = async () => {
     }),
   );
 
-  console.log("MongoDB en memoria limpiado");
+  console.log('MongoDB en memoria limpiado');
 };

@@ -1,8 +1,8 @@
-import { beforeAll, afterEach, afterAll } from "vitest";
-import supertest from "supertest";
+import { beforeAll, afterEach, afterAll } from 'vitest';
+import supertest from 'supertest';
 
-import * as db from "./database";
-import configureApp from "../../src/config/configureApp.js";
+import * as db from './database';
+import configureApp from '../../src/config/configureApp.js';
 
 const app = configureApp();
 
