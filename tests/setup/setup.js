@@ -2,7 +2,7 @@ import { beforeAll, afterEach, afterAll } from 'vitest';
 import supertest from 'supertest';
 
 import * as db from './database';
-import configureApp from '../../src/config/configureApp.js';
+import configureApp from '../../src/api.js';
 
 const app = configureApp();
 
