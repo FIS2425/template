@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
-import api from './config/api.js';
+import api from '../api.js';
 
-const MONOGO_URI = process.env.MONGOURL;
+const MONGO_URI = process.env.MONGOURL;
 const PORT = process.env.PORT || 3001;
 
 mongoose
-  .connect(MONOGO_URI)
+  .connect(MONGO_URI)
   .then(() => {
     console.log('Conexión con MongoDB OK');
 
