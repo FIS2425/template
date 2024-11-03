@@ -54,6 +54,14 @@ To run tests, use the following command:
 npm test
 ```
 
+### 7. Populating the Database 📚
+
+To populate the database with sample data, run:
+
+```bash
+npm run populate <FileName>
+````
+
 ## Docker Setup 🐳
 
 To run the application in a Docker container:
