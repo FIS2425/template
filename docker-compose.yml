@@ -29,6 +29,8 @@ services:
       - backend
     ports:
       - "3001:3001"
+    volumes:
+      - .:/template
 
 volumes:
   mongo-data:
