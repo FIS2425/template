@@ -11,7 +11,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node --env-file=.env ./src/config/index.js",
+    "start": "node ./src/config/index.js",
     "lint": "eslint . --max-warnings=0 --cache --cache-location node_modules/.cache/eslint",
     "lint-fix": "eslint . --fix --max-warnings=0 --cache --cache-location node_modules/.cache/eslint",
     "dev": "node --watch --env-file=.env ./src/config/index.js",
@@ -52,6 +52,7 @@
     "kafka-node": "5.0.0",
     "mongoose": "8.7.3",
     "swagger-ui-express": "5.0.1",
+    "uuid": "11.0.3",
     "winston": "3.16.0",
     "yamljs": "0.3.0"
   }
